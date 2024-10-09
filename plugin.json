@@ -1,0 +1,35 @@
+{
+    "active": true,
+    "hubId": "osm-api-interface",
+    "name": "OpenStreetMap API Interface",
+    "schema": "skill-1.0.0",
+    "version": "1.0.0",
+    "description": "Fetches geographic data for given coordinates using the OpenStreetMap API",
+    "author": "Robert Sigler <code@sigler.io>",
+    "author_url": "https://github.com/rmrfslashbin",
+    "license": "MIT",
+    "examples": [
+        {
+            "prompt": "What's in the area around latitude 51.5074 and longitude -0.1278?",
+            "call": "{\"latitude\": 51.5074, \"longitude\": -0.1278}"
+        },
+        {
+            "prompt": "Tell me about the location at 40.7128, -74.0060",
+            "call": "{\"latitude\": 40.7128, \"longitude\": -74.0060}"
+        }
+    ],
+    "entrypoint": {
+        "file": "handler.js",
+        "params": {
+            "latitude": {
+                "description": "Latitude of the location",
+                "type": "string"
+            },
+            "longitude": {
+                "description": "Longitude of the location",
+                "type": "string"
+            }
+        }
+    },
+    "imported": true
+}
